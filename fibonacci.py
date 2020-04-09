@@ -1,24 +1,21 @@
 ser=[]
-def F(a):
-    
-    f=0                                        
-    s=1   
-    
-    if a<=0:
-       print("The requested series is",f)
-    else:
-        print(f,s,end=" ")
-        for x in range(2,a):
-           next=f+s                           
-           ser.append(next)
-           f=s
-           s=next
-num=int(input("Enter the term:"))
-F(num)
-total=0
+max =int(input("Enter the term:"))
+first = 0
+second = 1
+print(first)
+print(second)
+ser.append(first)
+ser.append(second)
+while(True):
+	if(first+second < max):
+		print(first+second)
+		n=first+second
+		ser.append(n)
+		temp = first
+		first = second
+		second = temp+second
+
 for i in ser:
-    if i<=num:
-        print(i)
         if i%2 != 0:
             total+=i
-print (total+1)
+print (total)
