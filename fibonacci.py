@@ -14,7 +14,7 @@ while(True):
 		temp = first
 		first = second
 		second = temp+second
-
+total=0
 for i in ser:
         if i%2 != 0:
             total+=i
