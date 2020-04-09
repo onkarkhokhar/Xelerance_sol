@@ -1,21 +1,19 @@
-ser=[]
-max =int(input("Enter the term:"))
+ser = []
+max = int(input("Enter max value:"))
 first = 0
 second = 1
 print(first)
 print(second)
-ser.append(first)
-ser.append(second)
-while(True):
-	if(first+second < max):
-		print(first+second)
-		n=first+second
-		ser.append(n)
-		temp = first
-		first = second
-		second = temp+second
-total=0
+while (first + second < max):
+        n = first + second
+        ser.append(n)
+        print(n)
+        temp = first
+        first = second
+        second = temp + second
+
+total = 0
 for i in ser:
-        if i%2 != 0:
-            total+=i
-print (total)
+    if i % 2 != 0:
+        total += i
+print("odd number sum is:"+str(total))
